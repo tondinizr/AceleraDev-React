@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  padding-top: 56px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #fafafa;
+  color: #000;
+}
+
+/* ---Estilo para links ---*/
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* ---Estilo para Botões---*/
+
+button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* ---Estilo para os blocos---*/
+
+.bloco {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ---Estilo para responsividade dos blocos---*/
+
+@media screen and (min-width: 728px) {
+  .bloco {
+    width: 728px;
+  }
+}
+
+/* ---Barra Superior ---*/
+
+.barraSuperior {
+  backface-visibility: hidden;
+  background-color: white;
+  left: 0;
+  padding: 8px 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.barraSuperior .bloco {
+  display: flex;
+  justify-content: space-between;
+}
+
+.barraSuperior__logo {
+  display: inline-block;
+  height: 40px;
+}
+
+.barraSuperior__logo img {
+  height: 100%;
+}
+
+.barraSuperior__icon {
+  font-size: 1.6rem;
+}
+
+/* ---Usuarios ---*/
+
+.usuario__avatar {
+  display: flex;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.usuario__avatar__stories {
+  border-radius: 100%;
+  border: 2px solid white;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.usuario__avatar img {
+  height: 100%;
+  width: 100%;
+}
+
+.usuario__avatar--novoStories {
+  background: linear-gradient(
+    45deg,
+    rgba(245, 160, 77, 1) 0%,
+    rgba(160, 15, 139, 1) 100%
+  );
+}
+
+/*          ---Stories---           */
+
+.stories {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.stories__bloco {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.stories .usuario__avatar {
+  width: 78px;
+  height: 78px;
+  margin: 0 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.stories .usuario__avatar__stories {
+  height: 72px;
+  width: 72px;
+}
+
+/*          ---Feed---           */
+
+.feed {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+@media screen and (min-width: 728px) {
+  .feed {
+    padding: 16px 0;
+  }
+}
+
+/*          ---Posts---           */
+
+.post {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.post__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.post__header .usuario {
+  display: flex;
+  align-items: center;
+}
+
+.post__header .usuario__avatar {
+  height: 40px;
+  margin-right: 8px;
+  width: 40px;
+}
+
+.post__header .usuario__nome {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.post__curtidas {
+  font-size: 1.4rem;
+}
+
+.post__figure {
+  overflow: hidden;
+  margin: 0;
+  height: auto;
+  width: 100%;
+}
+
+.post__figure img {
+  width: 100%;
+}
+
+.post__controles {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.post__controle {
+  font-size: 2.4rem;
+  margin: 0 8px;
+}
+
+.post__controle:last-of-type {
+  justify-self: flex-end;
+  margin-left: auto;
+}
+
+.post__status {
+  display: flex;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.post__status .usuario {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.post__status .usuario span {
+  font-size: 1.2rem;
+}
+
+.post__status .usuario__avatar {
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
+}
